@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { projects } from "../data/projects";
 import OrbitCard from "./OrbitCard";
 
@@ -57,6 +57,27 @@ export default function ProjectsOrbit() {
 
         {/* the orbit itself */}
         <div className="relative flex-1">
+          {/* the active project's photo, centered, swaps as the front node changes */}
+          <AnimatePresence mode="wait">
+            {active.image && (
+              <motion.div
+                key={active.id}
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.94 }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(60vw,420px)] aspect-[4/5] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50"
+                style={{ zIndex: -1 }}
+              >
+                <img
+                  src={active.image}
+                  alt={active.title}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           {projects.map((project, i) => (
             <OrbitCard
               key={project.id}
