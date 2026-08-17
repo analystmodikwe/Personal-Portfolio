@@ -37,27 +37,13 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
     <motion.a
       href={project.href ?? "#"}
       style={{ x, y, scale, opacity, filter, zIndex }}
-      className="absolute top-1/2 left-1/2 -mt-20 -ml-28 w-56 md:w-64 rounded-2xl border border-edge overflow-hidden shadow-2xl shadow-black/40 pointer-events-auto"
+      className="absolute top-1/2 left-1/2 -mt-20 -ml-28 w-56 md:w-64 rounded-2xl border border-edge bg-panel/90 backdrop-blur-sm p-5 shadow-2xl shadow-black/40 pointer-events-auto"
     >
-      {/* background image, falls back to the plain panel color if none is set */}
-      <div
-        className="absolute inset-0 bg-panel-raised bg-cover bg-center"
-        style={project.image ? { backgroundImage: `url(${project.image})` } : undefined}
-      />
-      {/* gradient scrim so text stays legible over any photo */}
-      <div className="absolute inset-0 bg-gradient-to-t from-void/85 via-void/35 to-transparent" />
-
-      <div className="relative p-5">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-ink mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)]">
-          {project.year} · node {String(index + 1).padStart(2, "0")}
-        </p>
-        <h3 className="font-display text-lg font-medium leading-snug text-ink drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
-          {project.title}
-        </h3>
-        <p className="text-ink/80 text-xs mt-2 leading-relaxed line-clamp-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-          {project.summary}
-        </p>
-      </div>
+      <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2">
+        {project.year} · node {String(index + 1).padStart(2, "0")}
+      </p>
+      <h3 className="font-display text-lg font-medium leading-snug">{project.title}</h3>
+      <p className="text-mute text-xs mt-2 leading-relaxed line-clamp-3">{project.summary}</p>
     </motion.a>
   );
 }
