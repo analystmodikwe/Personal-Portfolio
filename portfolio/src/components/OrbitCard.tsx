@@ -48,11 +48,15 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
       <div className="absolute inset-0 bg-gradient-to-t from-void/85 via-void/35 to-transparent" />
 
       <div className="relative p-5">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
           {project.year} · node {String(index + 1).padStart(2, "0")}
         </p>
-        <h3 className="font-display text-lg font-medium leading-snug">{project.title}</h3>
-        <p className="text-mute text-xs mt-2 leading-relaxed line-clamp-3">{project.summary}</p>
+        <h3 className="font-display text-lg font-medium leading-snug text-ink drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
+          {project.title}
+        </h3>
+        <p className="text-mute text-xs mt-2 leading-relaxed line-clamp-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+          {project.summary}
+        </p>
       </div>
     </motion.a>
   );
