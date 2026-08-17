@@ -27,6 +27,7 @@ export const projects: Project[] = [
     // metric: "40ms p95 retrieval",
     href: "https://body-goals-green.vercel.app/",
     repo: "https://github.com/analystmodikwe/Body-Goals.git",
+    image: "/projects/new body.png"
   },
   {
     id: "proj-02",
