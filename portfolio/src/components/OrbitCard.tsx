@@ -45,7 +45,7 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
         style={project.image ? { backgroundImage: `url(${project.image})` } : undefined}
       />
       {/* gradient scrim so text stays legible over any photo */}
-      <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-void/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-void/85 via-void/35 to-transparent" />
 
       <div className="relative p-5">
         <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2">
