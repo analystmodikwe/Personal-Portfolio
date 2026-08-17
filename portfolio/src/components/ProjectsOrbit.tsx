@@ -68,14 +68,15 @@ export default function ProjectsOrbit() {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.94 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className="w-[min(28vw,220px)] aspect-[4/5] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50"
-        style={{ zIndex: -1 }}
-      >
-        <img
-          src={active.image}
-          alt={active.title}
-          className="w-full h-full object-cover"
-        />
+        className="w-[min(34vw,300px)] aspect-[16/10] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50 bg-panel"
+style={{ zIndex: -1 }}
+>
+  <img
+    src={active.image}
+    alt={active.title}
+    className="w-full h-full object-contain"
+  />
+        
       </motion.div>
     )}
   </AnimatePresence>
