@@ -39,6 +39,17 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
       style={{ x, y, scale, opacity, filter, zIndex }}
       className="absolute top-1/2 left-1/2 -mt-20 -ml-28 w-56 md:w-64 rounded-2xl border border-edge bg-panel/90 backdrop-blur-sm p-5 shadow-2xl shadow-black/40 pointer-events-auto"
     >
+
+      {/* background image, falls back to the plain panel color if none is set */}
+      <div
+        className="absolute inset-0 bg-panel-raised bg-cover bg-center"
+        style={project.image ? { backgroundImage: `url(${project.image})` } : undefined}
+      />
+      {/* gradient scrim so text stays legible over any photo */}
+      <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-void/40" />
+
+
+
       <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2">
         {project.year} · node {String(index + 1).padStart(2, "0")}
       </p>
