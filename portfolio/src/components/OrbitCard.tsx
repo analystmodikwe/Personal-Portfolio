@@ -54,7 +54,7 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
         <h3 className="font-display text-lg font-medium leading-snug text-ink drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
           {project.title}
         </h3>
-        <p className="text-mute text-xs mt-2 leading-relaxed line-clamp-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+        <p className="text-ink/80 text-xs mt-2 leading-relaxed line-clamp-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
           {project.summary}
         </p>
       </div>
