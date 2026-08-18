@@ -61,17 +61,18 @@ export default function ProjectsOrbit() {
          {/* the active project's photo, centered, swaps as the front node changes */}
 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
   <AnimatePresence mode="wait">
-    {active.image && (
+ {active.image && (
   <motion.a
     key={active.id}
     href={active.href ?? "#"}
+    target="_blank"
+    rel="noopener noreferrer"
     initial={{ opacity: 0, scale: 0.94 }}
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.94 }}
     whileHover={{ scale: 1.03 }}
     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    className="block w-[min(34vw,300px)] aspect-[16/10] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50 bg-panel pointer-events-auto cursor-pointer"
-    style={{ zIndex: -1 }}
+    className="block w-[min(34vw,300px)] aspect-[16/10] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50 bg-panel pointer-events-auto cursor-pointer relative z-10"
   >
     <img
       src={active.image}
