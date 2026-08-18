@@ -18,10 +18,10 @@ export default function Contact() {
           </h2>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="mailto:lmodikwe10@gmai.com"
+              href="mailto:analystmodikwe18@gmail.com"
               className="font-mono text-sm uppercase tracking-widest bg-signal text-void px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
             >
-              lmodikwe10@gmai.com
+              analystmodikwe18@gmail.com
             </a>
             <a
               href="https://github.com/analystmodikwe"
