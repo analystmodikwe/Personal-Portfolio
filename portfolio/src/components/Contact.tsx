@@ -23,15 +23,19 @@ export default function Contact() {
             </a>
             <a
               href="#"
-              className="font-mono text-sm uppercase tracking-widest border border-edge px-6 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
-            >
-              github
+  target="_blank"
+  rel="noopener noreferrer"
+  className="font-mono text-sm uppercase tracking-widest border border-edge px-6 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
+>
+  github
             </a>
             <a
-              href="#"
-              className="font-mono text-sm uppercase tracking-widest border border-edge px-6 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
-            >
-              linkedin
+             href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="font-mono text-sm uppercase tracking-widest border border-edge px-6 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
+>
+  linkedin
             </a>
           </div>
         </motion.div>
