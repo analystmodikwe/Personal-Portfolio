@@ -35,10 +35,12 @@ export default function OrbitCard({ project, index, total, progress, radius, onF
 
   return (
     <motion.a
-      href={project.href ?? "#"}
-      style={{ x, y, scale, opacity, filter, zIndex }}
-      className="absolute top-1/2 left-1/2 -mt-20 -ml-28 w-56 md:w-64 rounded-2xl border border-edge bg-panel/90 backdrop-blur-sm p-5 shadow-2xl shadow-black/40 pointer-events-auto"
-    >
+  href={project.href ?? "#"}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ x, y, scale, opacity, filter, zIndex }}
+  className="absolute top-1/2 left-1/2 -mt-20 -ml-28 w-56 md:w-64 rounded-2xl border border-edge bg-panel/90 backdrop-blur-sm p-5 shadow-2xl shadow-black/40 pointer-events-auto"
+>
       <p className="font-mono text-[10px] uppercase tracking-widest text-signal mb-2">
         {project.year} · node {String(index + 1).padStart(2, "0")}
       </p>
