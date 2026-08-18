@@ -76,7 +76,7 @@ export default function ShatterPortrait() {
           className="relative z-10 h-full flex flex-col justify-end px-6 md:px-10 pb-16 md:pb-24 max-w-6xl mx-auto"
         >
           <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-signal mb-4">
-            AI Software Engineer — AI Engineer
+            AI Full Stack Software Engineer/Developer 
           </p>
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-medium leading-[1.05] text-balance max-w-3xl">
             I build systems that learn, reason, and ship to production.
