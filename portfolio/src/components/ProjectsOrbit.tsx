@@ -123,12 +123,19 @@ export default function ProjectsOrbit() {
             </div>
             <div className="flex gap-3 font-mono text-xs uppercase tracking-widest">
               {active.repo && (
-                <a href={active.repo} className="text-mute hover:text-ink transition-colors">
+                <a href={active.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                
+                className="text-mute hover:text-ink transition-colors">
                   repo →
                 </a>
               )}
               {active.href && (
-                <a href={active.href} className="text-signal hover:text-ink transition-colors">
+                <a href={active.href} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-signal hover:text-ink transition-colors">
                   live →
                 </a>
               )}
