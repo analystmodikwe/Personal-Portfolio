@@ -23,9 +23,9 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-6 md:px-10 h-16 flex items-center justify-between">
-        <a href="#top" className="font-mono text-sm tracking-tight text-ink">
+        {/* <a href="#top" className="font-mono text-sm tracking-tight text-ink">
           <span className="text-signal">&gt;</span> engineer.ai
-        </a>
+        </a> */}
         <ul className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-mute">
           {LINKS.map((link) => (
             <li key={link.href}>
