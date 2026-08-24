@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { projects } from "../data/projects";
 import OrbitCard from "./OrbitCard";
+import ProjectsMobile from "./ProjectsMobile";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 function useOrbitRadius() {
   const [radius, setRadius] = useState({ x: 260, y: 120 });
@@ -25,6 +27,7 @@ function useOrbitRadius() {
 export default function ProjectsOrbit() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const radius = useOrbitRadius();
+  const isMobile = useIsMobile();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const { scrollYProgress } = useScroll({
@@ -37,6 +40,10 @@ export default function ProjectsOrbit() {
   }, []);
 
   const active = projects[activeIndex];
+
+  if (isMobile) {
+    return <ProjectsMobile />;
+  }
 
   return (
     <section
@@ -55,34 +62,31 @@ export default function ProjectsOrbit() {
           </h2>
         </div>
 
-        {/* the orbit itself */}
         <div className="relative flex-1">
-          {/* the active project's photo, centered, swaps as the front node changes */}
-         {/* the active project's photo, centered, swaps as the front node changes */}
-<div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-  <AnimatePresence mode="wait">
- {active.image && (
-  <motion.a
-    key={active.id}
-    href={active.href ?? "#"}
-    target="_blank"
-    rel="noopener noreferrer"
-    initial={{ opacity: 0, scale: 0.94 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 0.94 }}
-    whileHover={{ scale: 1.03 }}
-    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    className="block w-[min(34vw,300px)] aspect-[16/10] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50 bg-panel pointer-events-auto cursor-pointer relative z-10"
-  >
-    <img
-      src={active.image}
-      alt={active.title}
-      className="w-full h-full object-contain"
-    />
-  </motion.a>
-)}
-  </AnimatePresence>
-</div>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <AnimatePresence mode="wait">
+              {active.image && (
+                <motion.a
+                  key={active.id}
+                  href={active.href ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0.94 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.94 }}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  className="block w-[min(34vw,300px)] aspect-[16/10] rounded-2xl overflow-hidden border border-edge shadow-2xl shadow-black/50 bg-panel pointer-events-auto cursor-pointer relative z-10"
+                >
+                  <img
+                    src={active.image}
+                    alt={active.title}
+                    className="w-full h-full object-contain"
+                  />
+                </motion.a>
+              )}
+            </AnimatePresence>
+          </div>
 
           {projects.map((project, i) => (
             <OrbitCard
@@ -97,7 +101,6 @@ export default function ProjectsOrbit() {
           ))}
         </div>
 
-        {/* active project detail panel, crossfades as the front node changes */}
         <div className="px-6 md:px-10 pb-10 md:pb-14 max-w-6xl mx-auto w-full">
           <motion.div
             key={active.id}
@@ -123,19 +126,22 @@ export default function ProjectsOrbit() {
             </div>
             <div className="flex gap-3 font-mono text-xs uppercase tracking-widest">
               {active.repo && (
-                <a href={active.repo}
+              <a
+                href={active.repo}
                 target="_blank"
                 rel="noopener noreferrer"
-                
-                className="text-mute hover:text-ink transition-colors">
-                  repo →
-                </a>
-              )}
+                className="text-mute hover:text-ink transition-colors"
+              >
+                repo →
+              </a>
+            )}
               {active.href && (
-                <a href={active.href} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-signal hover:text-ink transition-colors">
+                <a
+                  href={active.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-signal hover:text-ink transition-colors"
+                >
                   live →
                 </a>
               )}
