@@ -2,9 +2,12 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ShatterTile from "./ShatterTile";
 import { useShatterPieces } from "../hooks/useShatterPieces";
+import { useIsMobile } from "../hooks/useIsMobile";
 
-const ROWS = 7;
-const COLS = 9;
+const ROWS_DESKTOP = 7;
+const COLS_DESKTOP = 9;
+const ROWS_MOBILE = 5;
+const COLS_MOBILE = 5;
 // Swap this for your own photo: drop a file into /public and update the path.
 // A tall, roughly-centered portrait with a plain or dark background shatters best.
 const PORTRAIT_SRC = "/snpl.png";
@@ -16,6 +19,9 @@ const REVEAL_SRC = "/0J4A2308.jpg";
 
 export default function ShatterPortrait() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  const ROWS = isMobile ? ROWS_MOBILE : ROWS_DESKTOP;
+  const COLS = isMobile ? COLS_MOBILE : COLS_DESKTOP;
   const pieces = useShatterPieces(ROWS, COLS);
 
   const { scrollYProgress } = useScroll({
