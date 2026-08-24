@@ -86,10 +86,10 @@ export default function ShatterPortrait() {
             the same picture: applied ML, reliable infrastructure, and
             products people actually use.
           </p> */}
-          <div className="mt-8 flex items-center gap-3 text-mute font-mono text-xs uppercase tracking-widest">
+          {/* <div className="mt-8 flex items-center gap-3 text-mute font-mono text-xs uppercase tracking-widest">
             <span className="inline-block w-6 h-px bg-mute" />
             scroll
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
