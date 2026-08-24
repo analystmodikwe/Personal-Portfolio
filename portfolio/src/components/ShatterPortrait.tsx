@@ -81,11 +81,11 @@ export default function ShatterPortrait() {
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-medium leading-[1.05] text-balance max-w-3xl">
             I build systems that learn, reason, and ship to production.
           </h1>
-          <p className="font-body text-mute text-base md:text-lg mt-6 max-w-xl">
+          {/* <p className="font-body text-mute text-base md:text-lg mt-6 max-w-xl">
             Scroll to break the surface — every project below is a piece of
             the same picture: applied ML, reliable infrastructure, and
             products people actually use.
-          </p>
+          </p> */}
           <div className="mt-8 flex items-center gap-3 text-mute font-mono text-xs uppercase tracking-widest">
             <span className="inline-block w-6 h-px bg-mute" />
             scroll
