@@ -85,7 +85,7 @@ export default function ShatterPortrait() {
             AI Full Stack Software Engineer/Developer 
           </p>
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-medium leading-[1.05] text-balance max-w-3xl">
-            I build systems that learn, reason, and ship to production.
+            "I build full-stack systems, then make sure they actually work in the real world."
           </h1>
           {/* <p className="font-body text-mute text-base md:text-lg mt-6 max-w-xl">
             Scroll to break the surface — every project below is a piece of
