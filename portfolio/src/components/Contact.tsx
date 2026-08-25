@@ -23,6 +23,13 @@ export default function Contact() {
             >
               analystmodikwe18@gmail.com
             </a>
+
+            <a
+              href="mailto:lmodikwe10@gmail.com"
+              className="font-mono text-sm uppercase tracking-widest bg-signal text-void px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+            >
+              lmodikwe10@gmail.com
+            </a>
             <a
               href="https://github.com/analystmodikwe"
               target="_blank"
