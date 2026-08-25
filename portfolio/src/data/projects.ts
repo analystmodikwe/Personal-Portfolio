@@ -41,16 +41,17 @@ export const projects: Project[] = [
     repo: "https://github.com/analystmodikwe/Company-Project-1.git",
     image: "/projects/website.png"
   },
-  {
+  {                                                                 
     id: "proj-03",
-    title: "Gradient Kitchen",
+    title: "Mangement DashBoard",
     summary:
-      "Internal eval harness for prompt + model comparisons, with regression tracking across releases.",
-    stack: ["React", "Node", "Postgres", "OpenAI API"],
+      " management dashboard to. Track projects, manage tasks, monitor deadlines, and visualize progress — all in a fast, responsive UI.",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     year: "2024",
-    metric: "3x faster eval cycle",
-    href: "#",
-    repo: "#",
+    // metric: "3x faster eval cycle",
+    href: "https://claude-project-management-dashboard-mu.vercel.app/",
+    repo: "https://github.com/analystmodikwe/company-project2-project-management-dashboard.git",
+    image: "/projects/dashbord.png"
   },
   {
     id: "proj-04",
