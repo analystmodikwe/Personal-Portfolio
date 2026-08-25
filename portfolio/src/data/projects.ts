@@ -53,16 +53,16 @@ export const projects: Project[] = [
     repo: "https://github.com/analystmodikwe/company-project2-project-management-dashboard.git",
     image: "/projects/dashbord.png"
   },
-  {
-    id: "proj-04",
-    title: "Signal Router",
-    summary:
-      "Multi-agent orchestration layer that routes tasks between specialist agents based on live confidence scores.",
-    stack: ["Python", "LangGraph", "Redis", "gRPC"],
-    year: "2024",
-    metric: "6 agents in production",
-    href: "#",
-    repo: "#",
-  },
+  // {
+  //   id: "proj-04",
+  //   title: "Signal Router",
+  //   summary:
+  //     "Multi-agent orchestration layer that routes tasks between specialist agents based on live confidence scores.",
+  //   stack: ["Python", "LangGraph", "Redis", "gRPC"],
+  //   year: "2024",
+  //   metric: "6 agents in production",
+  //   href: "#",
+  //   repo: "#",
+  // },
  
 ];
