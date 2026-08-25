@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const STACKS: { label: string; items: string[] }[] = [
-  { label: "modeling", items: ["PyTorch", "Transformers", "LoRA / PEFT", "ONNX"] },
-  { label: "systems", items: ["Python", "TypeScript", "FastAPI", "gRPC", "Redis"] },
-  { label: "product", items: ["React", "Next.js", "Postgres", "Docker", "AWS"] },
+  { label: "Frontend", items: ["React ", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"] },
+  { label: "Backend", items: ["Node.js", "Express", "RestAPI", "JWT"] },
+  { label: "Data", items: ["PostgreSql", "Power BI", "MongoDB"] },
 ];
 
 const fadeUp = {
@@ -23,13 +23,10 @@ export default function About() {
         >
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">about</p>
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-tight text-balance">
-            I work at the seam between research and production.
+            "I work at the intersection of data and full-stack development."
           </h2>
           <p className="text-mute mt-6 leading-relaxed">
-            Most of my time goes into taking a model from a promising notebook
-            result to something that holds up under real traffic, real data
-            drift, and real users. I care equally about the math and the
-            on-call rotation.
+            "I like owning a problem from the database up through the interface — designing the schema, building the API, and making sure what ships actually works for real users. I've done this on live client projects as well as solo builds, always with an eye for clean, maintainable code. Currently sharpening this through Melsoft's AI Full Stack Software Development programme."
           </p>
         </motion.div>
 
