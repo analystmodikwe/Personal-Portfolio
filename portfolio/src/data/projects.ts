@@ -31,14 +31,15 @@ export const projects: Project[] = [
   },
   {
     id: "proj-02",
-    title: "Autoscribe",
+    title: "Company-Project-1",
     summary:
-      "Realtime speech-to-structured-notes pipeline for clinical intake, tuned with LoRA on domain transcripts.",
-    stack: ["TypeScript", "Whisper", "LoRA", "WebRTC"],
-    year: "2025",
-    metric: "92% field accuracy",
-    href: "#",
-    repo: "#",
+      "Redesigning an outdated website using React and Tailwind CSS",
+    stack: ["JavaScript", "React.js", "TailWind"],
+    year: "2026",
+    // metric: "92% field accuracy",
+    href: "https://mokoena-tt-holdings.netlify.app/",
+    repo: "https://github.com/analystmodikwe/Company-Project-1.git",
+    image: "/projects/website.png"
   },
   {
     id: "proj-03",
