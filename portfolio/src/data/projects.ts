@@ -64,15 +64,5 @@ export const projects: Project[] = [
     href: "#",
     repo: "#",
   },
-  {
-    id: "proj-05",
-    title: "Pixel Loom",
-    summary:
-      "Diffusion-based texture synthesis tool for indie game artists, packaged as a lightweight desktop app.",
-    stack: ["Rust", "Tauri", "Stable Diffusion", "ONNX"],
-    year: "2023",
-    metric: "4.8★, 2k+ downloads",
-    href: "#",
-    repo: "#",
-  },
+ 
 ];
