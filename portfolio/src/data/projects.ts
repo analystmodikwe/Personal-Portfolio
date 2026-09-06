@@ -31,6 +31,18 @@ export const projects: Project[] = [
   },
   {
     id: "proj-02",
+    title: "Pulse-Dashboard",
+    summary:
+      "This project stores two independent, live datasets: earthquakes from the USGS GeoJSON feed and current weather readings from Open-Meteo.",
+    stack: ["React.js", "JavaScript","PostresSQL", "Tailwind CSS", "Vite"],
+    year: "2026",
+    // metric: "40ms p95 retrieval",
+    href: "https://pulse-dashboard-olive.vercel.app/",
+    repo: "https://github.com/analystmodikwe/pulse-dashboard",
+    image: "/projects/pulse-dashboard.png"
+  },
+  {
+    id: "proj-03",
     title: "Company-Project-1",
     summary:
       "Redesigning an outdated website using React and Tailwind CSS",
@@ -42,7 +54,7 @@ export const projects: Project[] = [
     image: "/projects/website.png"
   },
   {                                                                 
-    id: "proj-03",
+    id: "proj-04",
     title: "Mangement DashBoard",
     summary:
       " management dashboard to. Track projects, manage tasks, monitor deadlines, and visualize progress — all in a fast, responsive UI.",
