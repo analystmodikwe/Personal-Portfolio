@@ -5,15 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        void: "#0A0D12",
-        panel: "#12161F",
-        "panel-raised": "#171C27",
-        edge: "#242B3A",
-        ink: "#EDEFF4",
-        mute: "#8A93A6",
-        signal: "#8B7CFA", // latent-space violet
-        amber: "#F2A65A", // activation amber
-        wire: "#4FD1E8", // connective cyan, used sparingly
+        void: "#04182B",
+        panel: "#0B3A5B",
+        "panel-raised": "#1B6C8F",
+        edge: "#1B6C8F",
+        ink: "#F3F8F8",
+        mute: "#A9C0D0",
+        signal: "#FF7A3D",
+        amber: "#FFB27A",
+        wire: "#1B6C8F",
       },
       fontFamily: {
         display: ["'Space Grotesk'", "sans-serif"],
