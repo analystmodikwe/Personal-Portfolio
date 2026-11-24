@@ -186,9 +186,19 @@ a:focus-visible {
 .hero-scrim {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
   background: linear-gradient(90deg, rgb(4 24 43 / 74%) 0%, rgb(4 24 43 / 48%) 56%, rgb(4 24 43 / 25%) 100%);
+}
+
+.ocean-canvas {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: opacity 100ms linear;
 }
 
 .hero-content {
@@ -244,6 +254,7 @@ a:focus-visible {
 
 .scroll-cue {
   position: absolute;
+  z-index: 1;
   right: max(24px, calc((100vw - 1120px) / 2));
   bottom: 30px;
   display: flex;

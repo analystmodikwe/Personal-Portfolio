@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { content } from "./data/content";
 
 function Wave({ fill = "var(--foam)" }: { fill?: string }) {
@@ -14,7 +14,13 @@ function Navigation() {
   return (
     <header className="site-header">
       <nav className="nav-pill" aria-label="Main navigation">
-        <a className="brand" href="#hero-scene" aria-label="Lesedi, home">LM<span>.</span></a>
+        <a
+          className="brand"
+          href="#hero-scene"
+          aria-label={`${content.footer.name}, ${content.labels.home}`}
+        >
+          {content.footer.brand}<span>.</span>
+        </a>
         <button
           className="menu-toggle"
           type="button"
@@ -22,7 +28,7 @@ function Navigation() {
           aria-controls="primary-links"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? "Close" : "Menu"}
+          {menuOpen ? content.labels.menuClose : content.labels.menuOpen}
         </button>
         <div id="primary-links" className={`nav-links${menuOpen ? " is-open" : ""}`}>
           {content.navLinks.map((link) => (
@@ -224,6 +230,8 @@ function Contact() {
 }
 
 export default function App() {
+  const heroRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
     const root = document.documentElement;
     root.classList.add("has-reveal");
@@ -246,11 +254,35 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+
+    // Let the CSS gradient paint first and remain as the fallback behind WebGL.
+    let cancelled = false;
+    let cleanupOcean: (() => void) | undefined;
+    const timer = window.setTimeout(() => {
+      void import("./ocean")
+        .then(({ initOcean }) => {
+          if (!cancelled) cleanupOcean = initOcean(hero);
+        })
+        .catch((error: unknown) => {
+          console.error("Unable to load the ocean hero:", error);
+        });
+    }, 300);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      cleanupOcean?.();
+    };
+  }, []);
+
   return (
     <>
       <Navigation />
       <main>
-        <section className="hero" id="hero-scene">
+        <section className="hero" id="hero-scene" ref={heroRef}>
           <div className="hero-scrim" aria-hidden="true" />
           <div className="container hero-content">
             <p className="eyebrow">{content.hero.eyebrow}</p>
