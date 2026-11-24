@@ -19,6 +19,32 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "proj-01",
+    title: "service-flow",
+    summary:
+      "ServiceFlow SA gives independent barbers, braiders and nail techs a simple booking link, so clients book instantly and providers stop losing money to double-bookings, no-shows and buried WhatsApp messages.",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "Vite"],
+    year: "2026",
+    // metric: "40ms p95 retrieval",
+    href: "https://serviceflow-sa.vercel.app/",
+    repo: "https://github.com/analystmodikwe/serviceflow-sa.git",
+    image: "/projects/service-flow.png",
+  },
+
+  {
+    id: "proj-02",
+    title: "Straina",
+    summary:
+      "An intelligent antimicrobial-resistance mapping platform that visualises where drug-resistant organisms are emerging, tracks how resistance patterns change over time, and identifies potential hotspots before they become larger public-health threats.",
+    stack: ["React.js", "TypeScript", "PostresSQL", "Tailwind CSS", "Vite"],
+    year: "2026",
+    // metric: "40ms p95 retrieval",
+    href: "https://straina-eight.vercel.app/",
+    repo: "https://github.com/analystmodikwe/Straina.git",
+    image: "/projects/straina.png",
+  },
+
+  {
+    id: "proj-03",
     title: "New Body — Nutrition & Meal Planner",
     summary:
       "web app that calculates personalised daily calorie, macro, and water targets for losing fat while building muscle",
@@ -27,44 +53,20 @@ export const projects: Project[] = [
     // metric: "40ms p95 retrieval",
     href: "https://body-goals-green.vercel.app/",
     repo: "https://github.com/analystmodikwe/Body-Goals.git",
-    image: "/projects/new-body.png"
+    image: "/projects/new-body.png",
   },
   {
-    id: "proj-02",
-    title: "Pulse-Dashboard",
-    summary:
-      "This project stores two independent, live datasets: earthquakes from the USGS GeoJSON feed and current weather readings from Open-Meteo.",
-    stack: ["React.js", "JavaScript","PostresSQL", "Tailwind CSS", "Vite"],
-    year: "2026",
-    // metric: "40ms p95 retrieval",
-    href: "https://pulse-dashboard-olive.vercel.app/",
-    repo: "https://github.com/analystmodikwe/pulse-dashboard",
-    image: "/projects/pulse-dashboard.png"
-  },
-  {
-    id: "proj-03",
+    id: "proj-04",
     title: "Company-Project-1",
-    summary:
-      "Redesigning an outdated website using React and Tailwind CSS",
+    summary: "Redesigning an outdated website using React and Tailwind CSS",
     stack: ["JavaScript", "React.js", "TailWind"],
     year: "2026",
     // metric: "92% field accuracy",
     href: "https://mokoena-tt-holdings.netlify.app/",
     repo: "https://github.com/analystmodikwe/Company-Project-1.git",
-    image: "/projects/website.png"
+    image: "/projects/website.png",
   },
-  {                                                                 
-    id: "proj-04",
-    title: "Mangement DashBoard",
-    summary:
-      " management dashboard to. Track projects, manage tasks, monitor deadlines, and visualize progress — all in a fast, responsive UI.",
-    stack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    year: "2024",
-    // metric: "3x faster eval cycle",
-    href: "https://claude-project-management-dashboard-mu.vercel.app/",
-    repo: "https://github.com/analystmodikwe/company-project2-project-management-dashboard.git",
-    image: "/projects/dashbord.png"
-  },
+
   // {
   //   id: "proj-04",
   //   title: "Signal Router",
@@ -76,5 +78,4 @@ export const projects: Project[] = [
   //   href: "#",
   //   repo: "#",
   // },
- 
 ];

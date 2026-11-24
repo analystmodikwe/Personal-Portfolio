@@ -26,7 +26,7 @@ export default function About() {
             "I work at the intersection of data and full-stack development."
           </h2>
           <p className="text-mute mt-6 leading-relaxed">
-            "I like owning a problem from the database up through the interface — designing the schema, building the API, and making sure what ships actually works for real users. I've done this on live client projects as well as solo builds, always with an eye for clean, maintainable code. Currently sharpening this through Melsoft's AI Full Stack Software Development programme."
+            "I like owning a problem from the database up through the interface — designing the schema, building the API, and making sure what ships actually works for real users. I've done this on live client projects as well as solo builds, always with an eye for clean, maintainable code."
           </p>
         </motion.div>
 
