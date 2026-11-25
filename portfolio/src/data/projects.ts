@@ -57,17 +57,6 @@ export const projects: Project[] = [
   },
   {
     id: "proj-04",
-    title: "Company-Project-1",
-    summary: "Redesigning an outdated website using React and Tailwind CSS",
-    stack: ["JavaScript", "React.js", "TailWind"],
-    year: "2026",
-    // metric: "92% field accuracy",
-    href: "https://mokoena-tt-holdings.netlify.app/",
-    repo: "https://github.com/analystmodikwe/Company-Project-1.git",
-    image: "/projects/website.png",
-  },
-   {
-    id: "proj-05",
     title: "Assess-to-Intervene Colleague (Hackerthon)",
     summary: "A team of seven AI agents that marks a class set against a rubric, checks and corrects its own marks, finds each learner's main gap, and writes a catch-up task for every learner who needs one. The teacher reads a short brief and approves before any feedback is sent.",
     stack: ["JavaScript"],
@@ -77,6 +66,18 @@ export const projects: Project[] = [
     repo: "https://github.com/mandlenkosii/The-Assess-to-Intervene-Colleague.git",
     image: "/projects/Asses-to-Intervene-colleague.png",
   },
+  {
+    id: "proj-05",
+    title: "Company-Project-1",
+    summary: "Redesigning an outdated website using React and Tailwind CSS",
+    stack: ["JavaScript", "React.js", "TailWind"],
+    year: "2026",
+    // metric: "92% field accuracy",
+    href: "https://mokoena-tt-holdings.netlify.app/",
+    repo: "https://github.com/analystmodikwe/Company-Project-1.git",
+    image: "/projects/website.png",
+  },
+  
 
   // {
   //   id: "proj-04",
