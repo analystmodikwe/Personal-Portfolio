@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 
+// Keep the stack card limited to the requested CV technologies and casing.
 const STACKS: { label: string; items: string[] }[] = [
-  { label: "Frontend", items: ["React ", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"] },
-  { label: "Backend", items: ["Node.js", "Express", "RestAPI", "JWT"] },
-  { label: "Data", items: ["PostgreSql", "Power BI", "MongoDB"] },
+  { label: "Frontend", items: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"] },
+  { label: "Mobile", items: ["React Native", "Expo"] },
+  { label: "Backend", items: ["Node.js", "Express", "REST APIs", "Supabase Auth", "JWT"] },
+  { label: "Data", items: ["PostgreSQL", "Row-Level Security", "MongoDB", "Power BI"] },
+  { label: "Testing", items: ["Vitest", "Jest", "Playwright", "TDD"] },
+  { label: "DevOps", items: ["Git", "GitHub Actions", "Vercel", "Netlify"] },
 ];
 
 const fadeUp = {
@@ -22,11 +26,12 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">about</p>
+          {/* Updated About copy; the nonbreaking hyphen keeps full-stack on one line. */}
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-tight text-balance">
-            "I work at the intersection of data and full-stack development."
+            I work at the intersection of data and full‑stack development.
           </h2>
           <p className="text-mute mt-6 leading-relaxed">
-            "I like owning a problem from the database up through the interface — designing the schema, building the API, and making sure what ships actually works for real users. I've done this on live client projects as well as solo builds, always with an eye for clean, maintainable code."
+            I'm a full-stack developer with a data analytics background, so I start with the database and work outwards. I design the schema, secure it with Row-Level Security, build the API and ship the interface, then back it with automated tests. Recent work includes Guard'Ova, a Bluetooth-connected personal safety app; ServiceFlow SA, a multi-tenant booking platform; and Straina, a public health mapping platform where I served as Tech Lead. I'm a Melsoft Academy hackathon winner, based in Johannesburg.
           </p>
         </motion.div>
 
@@ -51,7 +56,7 @@ export default function About() {
                   {group.label}
                   <span className="text-mute">"</span>:
                 </p>
-                <div className="flex flex-wrap gap-2 pl-4">
+                <div className="flex min-w-0 flex-wrap gap-2 pl-4">
                   {group.items.map((item) => (
                     <span
                       key={item}
