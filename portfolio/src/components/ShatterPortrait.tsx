@@ -81,14 +81,18 @@ export default function ShatterPortrait() {
           style={{ opacity: headingOpacity, y: headingY }}
           className="relative z-10 h-full flex flex-col justify-end px-6 md:px-10 pb-16 md:pb-24 max-w-6xl mx-auto"
         >
-          {/* Updated hero copy, smaller mobile type, and the two requested actions. */}
+          {/* Scale and constrain the headline to keep it left of the portrait. */}
           <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-signal mb-4">
             AI FULL STACK SOFTWARE ENGINEER / DEVELOPER
           </p>
-          <h1 className="font-display text-3xl leading-[1] sm:text-5xl sm:leading-[1.05] md:text-7xl font-medium text-balance max-w-3xl">
-            I build secure, production-ready web and mobile apps with React, TypeScript and Supabase.
+          <h1 className="font-display text-[clamp(1.5rem,5vw,1.875rem)] leading-[1] sm:text-[clamp(1.75rem,4.5vw,4rem)] md:text-[clamp(2rem,4.5vw,4rem)] md:leading-[1.05] font-medium text-balance max-w-full md:max-w-[45%]">
+            Full-stack engineer who ships real products, from live-tracking safety apps to multi-tenant platforms.
           </h1>
-          <p className="font-body text-mute text-sm sm:text-base md:text-lg mt-4 max-w-xl">
+          {/* Add subtle contrast so the subtitle remains legible over the photo. */}
+          <p
+            className="font-body text-mute text-sm sm:text-base md:text-lg mt-4 max-w-xl"
+            style={{ textShadow: "0 1px 8px rgba(0, 0, 0, 0.85)" }}
+          >
             Based in Johannesburg · Open to full-stack and mobile roles.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
