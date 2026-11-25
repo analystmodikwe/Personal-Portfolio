@@ -41,7 +41,7 @@ export default function ShatterPortrait() {
 
   return (
     <section id="top" ref={containerRef} className="relative h-[220vh]">
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-void">
+      <div className="sticky top-0 min-h-screen w-full overflow-hidden bg-void">
         {/* the image revealed behind the portrait as it shatters */}
         <motion.div
           className="absolute inset-0 bg-contain bg-no-repeat"
@@ -76,16 +76,16 @@ export default function ShatterPortrait() {
           style={{ opacity: scrimOpacity }}
         />
 
-        {/* headline, pinned over the portrait, fades slightly ahead of the shards */}
+        {/* Keep content clear of the fixed navbar and allow it to grow if needed. */}
         <motion.div
           style={{ opacity: headingOpacity, y: headingY }}
-          className="relative z-10 h-full flex flex-col justify-end px-6 md:px-10 pb-16 md:pb-24 max-w-6xl mx-auto"
+          className="relative z-10 min-h-screen flex flex-col justify-end px-6 md:px-10 pt-28 pb-16 md:pb-24 max-w-6xl mx-auto"
         >
-          {/* Scale and constrain the headline to keep it left of the portrait. */}
+          {/* Reduce and cap the responsive headline so it stays left of the portrait. */}
           <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-signal mb-4">
             AI FULL STACK SOFTWARE ENGINEER / DEVELOPER
           </p>
-          <h1 className="font-display text-[clamp(1.5rem,5vw,1.875rem)] leading-[1] sm:text-[clamp(1.75rem,4.5vw,4rem)] md:text-[clamp(2rem,4.5vw,4rem)] md:leading-[1.05] font-medium text-balance max-w-full md:max-w-[45%]">
+          <h1 className="font-display text-[clamp(1.75rem,3.2vw,3rem)] leading-[1.15] max-[640px]:text-[clamp(1.5rem,7vw,2rem)] font-medium text-balance max-w-[600px]">
             Full-stack engineer who ships real products, from live-tracking safety apps to multi-tenant platforms.
           </h1>
           {/* Add subtle contrast so the subtitle remains legible over the photo. */}
