@@ -81,21 +81,31 @@ export default function ShatterPortrait() {
           style={{ opacity: headingOpacity, y: headingY }}
           className="relative z-10 h-full flex flex-col justify-end px-6 md:px-10 pb-16 md:pb-24 max-w-6xl mx-auto"
         >
+          {/* Updated hero copy, smaller mobile type, and the two requested actions. */}
           <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-signal mb-4">
-            AI Full Stack Software Engineer/Developer 
+            AI FULL STACK SOFTWARE ENGINEER / DEVELOPER
           </p>
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-medium leading-[1.05] text-balance max-w-3xl">
-            "I build full-stack systems, then make sure they actually work in the real world."
+          <h1 className="font-display text-3xl leading-[1] sm:text-5xl sm:leading-[1.05] md:text-7xl font-medium text-balance max-w-3xl">
+            I build secure, production-ready web and mobile apps with React, TypeScript and Supabase.
           </h1>
-          {/* <p className="font-body text-mute text-base md:text-lg mt-6 max-w-xl">
-            Scroll to break the surface — every project below is a piece of
-            the same picture: applied ML, reliable infrastructure, and
-            products people actually use.
-          </p> */}
-          {/* <div className="mt-8 flex items-center gap-3 text-mute font-mono text-xs uppercase tracking-widest">
-            <span className="inline-block w-6 h-px bg-mute" />
-            scroll
-          </div> */}
+          <p className="font-body text-mute text-sm sm:text-base md:text-lg mt-4 max-w-xl">
+            Based in Johannesburg · Open to full-stack and mobile roles.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#work"
+              className="font-mono text-xs sm:text-sm uppercase tracking-widest bg-signal text-void px-5 py-3 rounded-full hover:opacity-90 transition-opacity"
+            >
+              View Projects
+            </a>
+            <a
+              href="/Lesedi_Modikwe_NEW_CV.pdf"
+              download
+              className="font-mono text-xs sm:text-sm uppercase tracking-widest border border-edge px-5 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
+            >
+              Download CV
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
