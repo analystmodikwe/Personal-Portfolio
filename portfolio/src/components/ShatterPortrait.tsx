@@ -103,7 +103,7 @@ export default function ShatterPortrait() {
               View Projects
             </a>
             <a
-              href="/Lesedi_Modikwe_NEW_CV.pdf"
+              href="/Lesedi_Modikwe_CV.pdf"
               download
               className="font-mono text-xs sm:text-sm uppercase tracking-widest border border-edge px-5 py-3 rounded-full hover:border-signal hover:text-signal transition-colors"
             >
